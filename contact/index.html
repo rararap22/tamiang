@@ -862,6 +862,34 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 				</div>
 					</div>
 				</div>
+
+<script>
+  const form = document.querySelector('.elementor-form');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();        // Hentikan submit default
+      e.stopPropagation();       // Hentikan event bubbling (blokir Elementor)
+      
+      const name = document.getElementById('form-field-name').value.trim();
+      const need = document.getElementById('form-field-need').value;
+      const message = document.getElementById('form-field-message').value.trim();
+
+      const phone = "6281287857232";
+
+      const text = `Hello, I am interested in products.%0A%0AName: ${name}%0AProduct: ${need}%0AMessage: ${message}%0A%0APlease get back to me soon. Thank you!`;
+
+      window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+
+      return false;  // Tambahan jaga-jaga agar form tidak lanjut
+    });
+  }
+</script>
+
+
+
+
+
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-7ede9955 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no" data-id="7ede9955" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 							<div class="elementor-background-overlay"></div>
 							<div class="elementor-container elementor-column-gap-wide">
